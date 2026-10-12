@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+</head>
+
+<body>
+    <script>
+        let correctpin = 7788;
+        let pin = Number(prompt('enter pin code'));
+        if (correctpin === pin) {
+            console.log('pin code is correct')
+        }
+        else {
+            console.log('pin code is incorrect')
+        }
+        let choice = prompt('choce your opton');
+
+        let balance = 10000;
+
+        if (choice === "1") {
+            console.log('your balance:' + balance);
+        }
+        else if (choice === "2") {
+         let amount = Number(prompt('Enter amount to withdraw'))
+        
+        if (amount <= balance) {
+            balance = balance - amount;
+            console.log('Withdrawal successful')
+            console.log('Remaining balance:' + balance)
+
+        }
+        else{
+            console.log('Insufficient balance')
+        }
+        }
+        else if (choice === 3) {
+            console.log('you selected Deposit')
+        }
+        else if (choice === 4) {
+            console.log('You selected Exit')
+        }
+        else {
+            console.log('Invalid choice');
+        }
+
+    </script>
+</body>
+
+</html>
